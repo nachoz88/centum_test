@@ -1,0 +1,1 @@
+[10-Jun-2018 09:43:20 UTC] PHP Fatal error:  Class 'Fideloper\Proxy\TrustProxies' not found in /home/ubuntu/workspace/app/Http/Middleware/TrustProxies.php on line 8
