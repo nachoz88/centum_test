@@ -14,6 +14,7 @@
             </ul>
         </p>
         <h5>Total : {{$total}}</h5>
+        
       </div>
     </main>
 </div>

@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Mail;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Teams;
 use App\Bets;
 use App\Betitems;
+use App\Mail\BetPlaced;
+use App\Http\Controllers\Controller;
 
 class BetsController extends Controller
 {
@@ -71,7 +73,8 @@ class BetsController extends Controller
                 $betitem->save();
             }
             
-            // TODO : ADD EMAIL LOGIC HERE
+            Mail::to(Auth::user()->email)->send(new BetPlaced($tn , $total));
+
 
         }
         
